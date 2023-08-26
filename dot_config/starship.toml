@@ -1,0 +1,89 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+format = """
+$username\
+$sudo\
+$hostname\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$c\
+$golang\
+$nodejs\
+$python\
+$rust\
+$package\
+$git_metrics\
+$cmd_duration\
+$line_break\
+$time\
+$character\
+"""
+
+right_format = """
+"""
+
+[character]
+success_symbol = '[➜](bold green)' 
+error_symbol = "[✗](bold red)" 
+
+[directory]
+format = "in [$path]($style)[$read_only]($read_only_style) "
+
+[git_branch]
+only_attached = true
+
+[git_commit]
+tag_disabled = false
+
+[git_metrics]
+disabled = false
+
+[status]
+disabled = false
+
+[hostname]
+format = "@ [$ssh_symbol$hostname]($style) "
+ssh_only = true
+
+[line_break]
+
+[c]
+symbol = " "
+
+[package]
+format = '[{$symbol$version}]($style) '
+symbol = "󰏗 "
+
+[docker_context]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[python]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[sudo]
+disabled = false
+symbol = "√ "
+
+[time]
+format = "$time "
+disabled = false
+
+[username]
+format = "[$user]($style) "
+show_always = true
