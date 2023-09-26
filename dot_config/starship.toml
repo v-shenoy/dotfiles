@@ -15,6 +15,7 @@ $git_state\
 $git_status\
 $c\
 $golang\
+$lua\
 $nodejs\
 $python\
 $rust\
@@ -67,11 +68,14 @@ symbol = " "
 [golang]
 symbol = " "
 
-[python]
-symbol = " "
+[lua]
+symbol = " "
 
 [nodejs]
 symbol = " "
+
+[python]
+symbol = " "
 
 [rust]
 symbol = " "
