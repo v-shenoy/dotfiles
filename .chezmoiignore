@@ -5,5 +5,8 @@
 LICENSE
 README.md
 
+# Non-home directory config files
+etc/
+
 # Misc.
 gallery/
