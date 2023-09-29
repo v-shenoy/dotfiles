@@ -5,10 +5,14 @@
 [core]
     pager = delta
 
+[merge]
+    conflictstyle = diff3
+
 [interactive]
     diffFilter = delta --color-only --features=interactive
 
 [delta]
+    line-numbers = true
     features = decorations
 
 [delta "interactive"]
