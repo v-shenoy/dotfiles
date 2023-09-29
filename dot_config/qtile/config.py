@@ -51,7 +51,7 @@ keys = [
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     
     # Applications
-    Key([mod], "d", lazy.spawn("rofi -modi drun -show drun"), desc="Launch rofi"),
+    Key([mod], "d", lazy.spawn("rofi -modi drun -show drun -show-icons"), desc="Launch rofi"),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "f", lazy.spawn(browser), desc="Launch browser"),
     KeyChord([mod], "p", [
@@ -61,6 +61,8 @@ keys = [
         mode=False,
         name="Launch",
     ),
+    Key([mod, "shift"], "s", lazy.spawn("flameshot gui"), desc="Launch flameshot gui"),
+    Key([], "Print", lazy.spawn("flameshot full"), desc="Take full screenshot"),
 
     # Layouts
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle layouts"),
@@ -70,6 +72,8 @@ keys = [
     # Misc.
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn command using prompt widget"),
+    Key([mod], "l", lazy.spawn("betterlockscreen --lock dim"), desc="Lock screen"),
+    Key([mod, "control"], "x", lazy.spawn("dm-tool switch-to-greeter"), desc="Lock screen"),
 
     # Qtile
     Key([mod, "control"], "d", open_docs, desc="Open Qtile Docs"),
